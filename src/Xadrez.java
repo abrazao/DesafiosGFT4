@@ -20,9 +20,7 @@ public class Xadrez {
 	    	if(x1 == 0 && y1 == 0 && x2 == 0 && y2 == 0) break; //condição de parada
 	    	if(x1 == x2 && y1 == y2)		
 	    		System.out.println("0"); // Nenhum movimento
-	        else if(x1 == x2 || y1 != y2)	
-	        	System.out.println("1"); // Um movimento na vertical
-	    	else if(x1 != x2 && y1 == y2) // Um movimento na horizontal
+	        else if(x1 == x2 || y1 == y2 || x1 + y1 == x2 + y2 || (x1 + y1 - x2 - y2) % 2 == 0)   
 	    		System.out.println("1");	
 	        else 
 	        	System.out.println("2");	
